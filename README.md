@@ -38,15 +38,15 @@ functionalities while still leveraging platform-specific features.
 # App Preview
 
 ### Interactive App Preview
-➡️ [App Preview](https://appetize.io/embed/b_7lrdjz7bbdxl3oguhgub6fsm4q)
+➡️ [App Preview](https://appetize.io/app/b_7lrdjz7bbdxl3oguhgub6fsm4q)
 
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: center;">
         <h3>Android Sequence Preview</h3>
-        <img src="https://appetize.io/app/b_7lrdjz7bbdxl3oguhgub6fsm4q" width="200" alt="android"/>
+        <img src="https://media.giphy.com/media/Th9jhNbZVK2xAAuo5D/giphy.gif" alt="android"/>
     </div>
     <div style="text-align: center;">
         <h3>iOS Sequence Preview</h3>
-        <img src="https://media.giphy.com/media/h44e2jeDIB7UhDwP0Q/giphy.gif" width="200" alt="ios"/>
+        <img src="https://media.giphy.com/media/h44e2jeDIB7UhDwP0Q/giphy.gif" alt="ios"/>
     </div>
 </div>
