@@ -37,11 +37,11 @@ functionalities while still leveraging platform-specific features.
 
 # App Preview
 
-## Interactive App Preview
-[![App Preview](https://appetize.io/embed/b_7lrdjz7bbdxl3oguhgub6fsm4q.png)](https://appetize.io/app/b_7lrdjz7bbdxl3oguhgub6fsm4q)
+ Interactive App Preview
+![App Preview](https://appetize.io/embed/b_7lrdjz7bbdxl3oguhgub6fsm4q)
 
-## Android Sequence Preview
+Android Sequence Preview
 ![Android Preview](https://media.giphy.com/media/Th9jhNbZVK2xAAuo5D/giphy.gif)
 
-## iOS Sequence Preview
+iOS Sequence Preview
 ![iOS Preview](https://media.giphy.com/media/h44e2jeDIB7UhDwP0Q/giphy.gif)
