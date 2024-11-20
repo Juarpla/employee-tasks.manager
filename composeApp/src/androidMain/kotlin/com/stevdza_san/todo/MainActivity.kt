@@ -1,5 +1,6 @@
-package com.task.manager
+package com.stevdza_san.todo
 
+import App
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
