@@ -38,15 +38,15 @@ functionalities while still leveraging platform-specific features.
 # App Preview
 
 ### Interactive App Preview
-➡️ [App Preview](https://appetize.io/app/b_7lrdjz7bbdxl3oguhgub6fsm4q)
+➡️ [App Preview](https://appetize.io/app/b_dqysydhgy3hi6idq3boqipnmii)
 
 <div style="display: flex; justify-content: space-between;">
     <div style="text-align: center;">
         <h3>Android Sequence Preview</h3>
-        <img src="https://media.giphy.com/media/Th9jhNbZVK2xAAuo5D/giphy.gif" alt="android"/>
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3R5eDYzYnpmenI4dHdwYXN6dGluOXd5OThyNHpmaWxpMXl3cnRsNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RMkqChRx9oSQbrIJlL/giphy.gif" alt="android"/>
     </div>
     <div style="text-align: center;">
         <h3>iOS Sequence Preview</h3>
-        <img src="https://media.giphy.com/media/h44e2jeDIB7UhDwP0Q/giphy.gif" alt="ios"/>
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGlrNGR3enN3cHFzdW9wc3Z1Zzl6N21oNDlvMTQ0bzBrbnMweTBmZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DYWOWXcxqBu9fgbSOF/giphy.gif" alt="ios"/>
     </div>
 </div>
