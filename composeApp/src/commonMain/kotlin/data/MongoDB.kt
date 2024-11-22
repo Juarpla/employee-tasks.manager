@@ -41,11 +41,22 @@ class MongoDB {
     }
 
     // Function to read the completed tasks from the MongoDB database
-    fun readCompletedTasks(): Flow<RequestState<List<ToDoTask>>> {
-        return realm?.query<ToDoTask>(query = "completed == $0", true)
-            ?.asFlow()
-            ?.map { result -> RequestState.Success(data = result.list) }
-            ?: flow { RequestState.Error(message = "Realm is not available.") }
+    fun readCompletedTasks(): Flow<RequestState<List<ToDoTask>>> = flow {
+        val realmInstance = realm
+        if (realmInstance == null) {
+            emit(RequestState.Error(message = "Realm is not available."))
+            return@flow
+        }
+
+        realmInstance.query<ToDoTask>("completed == $0", true)
+            .asFlow()
+            .collect { results ->
+                val taskList = mutableListOf<ToDoTask>()
+                for (task in results.list) {
+                    taskList.add(task)
+                }
+                emit(RequestState.Success(data = taskList))
+            }
     }
 
     // Function to add a task to the MongoDB database

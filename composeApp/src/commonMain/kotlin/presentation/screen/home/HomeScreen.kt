@@ -190,6 +190,7 @@ fun DisplayTasks(
             onSuccess = {
                 if (it.isNotEmpty()) {
                     LazyColumn(modifier = Modifier.padding(horizontal = 24.dp)) {
+                        // Iteration over the list of tasks to display each task
                         items(
                             items = it,
                             key = {task -> task._id.toHexString() }
