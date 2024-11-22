@@ -14,9 +14,14 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
+// Setting alias for complex types of collections
 typealias MutableTasks = MutableState<RequestState<List<ToDoTask>>>
 typealias Tasks = MutableState<RequestState<List<ToDoTask>>>
 
+/**
+ * Class to define the HomeViewModel for the HomeScreen, containing the
+ * logic for reading and updating tasks in the MongoDB database
+ **/
 class HomeViewModel(private val mongoDB: MongoDB) : ScreenModel {
     private var _activeTasks: MutableTasks = mutableStateOf(RequestState.Idle)
     val activeTasks: Tasks = _activeTasks
@@ -24,6 +29,10 @@ class HomeViewModel(private val mongoDB: MongoDB) : ScreenModel {
     private var _completedTasks: MutableTasks = mutableStateOf(RequestState.Idle)
     val completedTasks: Tasks = _completedTasks
 
+    /**
+    * Initialize the HomeView with the active and completed tasks
+    * This happens after app was closed and reopened to persist the data
+    **/
     init {
         _activeTasks.value = RequestState.Loading
         _completedTasks.value = RequestState.Loading
@@ -41,6 +50,7 @@ class HomeViewModel(private val mongoDB: MongoDB) : ScreenModel {
         }
     }
 
+    // Function to set the action coming from the HomeScreen (DisplayTasks)
     fun setAction(action: TaskAction) {
         when (action) {
             is TaskAction.Delete -> {

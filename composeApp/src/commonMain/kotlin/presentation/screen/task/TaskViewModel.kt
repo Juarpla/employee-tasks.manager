@@ -9,9 +9,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.launch
 
-class TaskViewModel(
-    private val mongoDB: MongoDB
-): ScreenModel {
+/**
+* Class to define the TaskViewModel for the TaskScreen, containing the logic
+* for adding and updating tasks in the MongoDB database
+**/
+class TaskViewModel(private val mongoDB: MongoDB): ScreenModel {
 
     fun setAction(action: TaskAction) {
         when (action) {

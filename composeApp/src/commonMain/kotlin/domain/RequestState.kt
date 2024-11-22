@@ -9,6 +9,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
 import androidx.compose.runtime.Composable
 
+// Class to implement the state of requests
 sealed class RequestState<out T> {
     data object Idle : RequestState<Nothing>()
     data object Loading : RequestState<Nothing>()
@@ -22,7 +23,7 @@ sealed class RequestState<out T> {
     /**
      * Returns data from a [Success].
      * @throws ClassCastException If the current state is not [Success]
-     *  */
+     **/
     fun getSuccessData() = (this as Success).data
     fun getSuccessDataOrNull(): T? {
         return try {
@@ -35,7 +36,7 @@ sealed class RequestState<out T> {
     /**
      * Returns an error message from an [Error]
      * @throws ClassCastException If the current state is not [Error]
-     *  */
+     **/
     fun getErrorMessage() = (this as Error).message
     fun getErrorMessageOrEmpty(): String {
         return try {
@@ -45,6 +46,7 @@ sealed class RequestState<out T> {
         }
     }
 
+    // Function to handle the state of the request
     @Composable
     fun DisplayResult(
         onIdle: (@Composable () -> Unit)? = null,
@@ -56,6 +58,7 @@ sealed class RequestState<out T> {
                     fadeOut(tween(durationMillis = 300))
         }
     ) {
+        // Animate the content based on the state
         AnimatedContent(
             targetState = this,
             transitionSpec = transitionSpec,

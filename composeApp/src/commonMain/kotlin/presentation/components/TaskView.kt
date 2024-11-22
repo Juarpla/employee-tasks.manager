@@ -40,6 +40,7 @@ fun TaskView(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
+        // Details of the task row: content text and icons
         Row(verticalAlignment = Alignment.CenterVertically) {
             Checkbox(
                 checked = task.completed,

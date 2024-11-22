@@ -22,8 +22,10 @@ val darkBlueColor = Color(color = 0xFF1565C0)
 @Composable
 @Preview
 fun App() {
+    // Initialize Koin as a dependency injection framework
     initializeKoin()
 
+    // Define the color scheme for the app from Material Design 3
     val lightColors = lightColorScheme(
         primary = lightBlueColor,
         onPrimary = darkBlueColor,
@@ -36,10 +38,12 @@ fun App() {
         primaryContainer = lightBlueColor,
         onPrimaryContainer = darkBlueColor
     )
+    // Set the color scheme based on the system theme
     val colors by mutableStateOf(
         if (isSystemInDarkTheme()) darkColors else lightColors
     )
 
+    // Implement the Navigator with the SlideTransition
     MaterialTheme(colorScheme = colors) {
         Navigator(HomeScreen()) {
             SlideTransition(it)
@@ -47,6 +51,7 @@ fun App() {
     }
 }
 
+// Define the module for the MongoDB dependency as persistence memory
 val mongoModule = module {
     single {MongoDB()}
     factory {HomeViewModel(get())}

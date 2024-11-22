@@ -32,6 +32,7 @@ import domain.ToDoTask
 const val DEFAULT_TITLE = "Type in the title here ..."
 const val DEFAULT_DESCRIPTION = "Add details about the task ..."
 
+// Class to define the TaskScreen UI
 data class TaskScreen(val task: ToDoTask? = null) : Screen {
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
@@ -45,6 +46,7 @@ data class TaskScreen(val task: ToDoTask? = null) : Screen {
             mutableStateOf(task?.description ?: DEFAULT_DESCRIPTION)
         }
 
+        // Scaffold to define the layout of the TaskScreen
         Scaffold(
             topBar = {
                 TopAppBar(
@@ -69,6 +71,7 @@ data class TaskScreen(val task: ToDoTask? = null) : Screen {
                     }
                 )
             },
+            // Floating Action Button to add or update a task like a checkmark
             floatingActionButton = {
                 if (currentTitle.isNotEmpty() && currentDescription.isNotEmpty()) {
                     FloatingActionButton(

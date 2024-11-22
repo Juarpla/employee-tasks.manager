@@ -9,6 +9,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 
+// Class to define the MongoDB database and the operations that can be run on device
 class MongoDB {
     private var realm: Realm? = null
 
