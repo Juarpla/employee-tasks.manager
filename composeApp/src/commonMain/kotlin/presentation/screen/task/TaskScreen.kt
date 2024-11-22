@@ -34,6 +34,7 @@ const val DEFAULT_DESCRIPTION = "Add details about the task ..."
 
 // Class to define the TaskScreen UI
 data class TaskScreen(val task: ToDoTask? = null) : Screen {
+    // Involves the TaskViewModel to handle the logic for create and updating tasks
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     override fun Content() {

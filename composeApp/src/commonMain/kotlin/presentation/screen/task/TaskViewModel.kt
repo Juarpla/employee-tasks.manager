@@ -15,6 +15,7 @@ import kotlinx.coroutines.launch
 **/
 class TaskViewModel(private val mongoDB: MongoDB): ScreenModel {
 
+    // Set the action for the TaskScreen according to the TaskAction
     fun setAction(action: TaskAction) {
         when (action) {
             is TaskAction.Add -> {
@@ -29,12 +30,14 @@ class TaskViewModel(private val mongoDB: MongoDB): ScreenModel {
         }
     }
 
+    // Add a task to the MongoDB database
     private fun addTask(task: ToDoTask) {
         screenModelScope.launch(Dispatchers.IO) {
             mongoDB.addTask(task)
         }
     }
 
+    // Update a task in the MongoDB database
     private fun updateTask(task: ToDoTask) {
         screenModelScope.launch(Dispatchers.IO) {
             mongoDB.updateTask(task)

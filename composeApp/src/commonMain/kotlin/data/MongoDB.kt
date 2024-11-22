@@ -17,6 +17,7 @@ class MongoDB {
         configureTheRealm()
     }
 
+    // Function to configure the Realm database
     private fun configureTheRealm() {
         if (realm == null || realm!!.isClosed()) {
             val config = RealmConfiguration.Builder(
@@ -28,6 +29,7 @@ class MongoDB {
         }
     }
 
+    // Function to read the active tasks from the MongoDB database
     fun readActiveTasks(): Flow<RequestState<List<ToDoTask>>> {
         return realm?.query<ToDoTask>(query = "completed == $0", false)
             ?.asFlow()
@@ -38,6 +40,7 @@ class MongoDB {
             } ?: flow { RequestState.Error(message = "Realm is not available.") }
     }
 
+    // Function to read the completed tasks from the MongoDB database
     fun readCompletedTasks(): Flow<RequestState<List<ToDoTask>>> {
         return realm?.query<ToDoTask>(query = "completed == $0", true)
             ?.asFlow()
@@ -45,10 +48,12 @@ class MongoDB {
             ?: flow { RequestState.Error(message = "Realm is not available.") }
     }
 
+    // Function to add a task to the MongoDB database
     suspend fun addTask(task: ToDoTask) {
         realm?.write { copyToRealm(task) }
     }
 
+    // Function to update a task in the MongoDB database
     suspend fun updateTask(task: ToDoTask) {
         realm?.write {
             try {
@@ -67,6 +72,7 @@ class MongoDB {
         }
     }
 
+    // Function to set a task as completed in the MongoDB database
     suspend fun setCompleted(task: ToDoTask, taskCompleted: Boolean) {
         realm?.write {
             try {
@@ -80,6 +86,7 @@ class MongoDB {
         }
     }
 
+    // Function to set a task as favorite in the MongoDB database
     suspend fun setFavorite( task: ToDoTask, isFavorite: Boolean ) {
         realm?.write {
             try {
@@ -93,6 +100,7 @@ class MongoDB {
         }
     }
 
+    // Function to delete a task from the MongoDB database
     suspend fun deleteTask( task: ToDoTask ) {
         realm?.write {
             try {

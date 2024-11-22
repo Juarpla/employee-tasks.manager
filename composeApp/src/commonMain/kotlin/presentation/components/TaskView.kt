@@ -20,6 +20,7 @@ import taskmanager.composeapp.generated.resources.Res
 import taskmanager.composeapp.generated.resources.delete
 import taskmanager.composeapp.generated.resources.star
 
+// Composable function to display the task view
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 fun TaskView(

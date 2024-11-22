@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
+// Composable function to display the error screen
 @Composable
 fun ErrorScreen(message: String? = null) {
     Box(

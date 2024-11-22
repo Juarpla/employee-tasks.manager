@@ -43,6 +43,7 @@ import presentation.screen.task.TaskScreen
 
 // Class to define the HomeScreen UI
 class HomeScreen : Screen {
+    // Involves the HomeViewModel to handle the logic for displaying tasks
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     override fun Content() {

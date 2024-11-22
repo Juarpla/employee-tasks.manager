@@ -69,18 +69,21 @@ class HomeViewModel(private val mongoDB: MongoDB) : ScreenModel {
         }
     }
 
+    // Set the task as completed in the MongoDB database
     private fun setCompleted(task: ToDoTask, completed: Boolean) {
         screenModelScope.launch(Dispatchers.IO) {
             mongoDB.setCompleted(task, completed)
         }
     }
 
+    // Set the task as favorite in the MongoDB database
     private fun setFavorite(task: ToDoTask, isFavorite: Boolean) {
         screenModelScope.launch(Dispatchers.IO) {
             mongoDB.setFavorite(task, isFavorite)
         }
     }
 
+    // Delete the task from the MongoDB database
     private fun deleteTask(task: ToDoTask) {
         screenModelScope.launch(Dispatchers.IO) {
             mongoDB.deleteTask(task)
