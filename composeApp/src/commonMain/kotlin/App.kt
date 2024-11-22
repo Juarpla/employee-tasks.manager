@@ -22,7 +22,6 @@ val darkBlueColor = Color(color = 0xFF1565C0)
 @Composable
 @Preview
 fun App() {
-    // Initialize Koin as a dependency injection framework
     initializeKoin()
 
     // Define the color scheme for the app from Material Design 3
@@ -58,6 +57,7 @@ val mongoModule = module {
     factory {TaskViewModel(get())}
 }
 
+// Initialize Koin as a dependency injection framework
 fun initializeKoin() {
     startKoin {
         modules(mongoModule)
