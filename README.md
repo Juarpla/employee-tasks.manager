@@ -10,7 +10,7 @@ The Employee Task Manager App is your go-to solution for effective task manageme
 
 YouTube demonstration:
 
-[Employee Task Manager Demo Video](https://youtu.be/U1w0QI6K13A)
+[Employee Task Manager Demo Video](https://youtu.be/oKr-Z7evXWU)
 
 # Development Environment
 
