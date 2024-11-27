@@ -35,6 +35,14 @@ functionalities while still leveraging platform-specific features.
 * [Kotlin: Jetbrains](https://www.jetbrains.com/opensource/kotlin/)
 * [Kotlin Blog](https://blog.jetbrains.com/kotlin/)
 
+# Future Work
+
+* Implement login functionality with role-based access control (e.g., admin, manager, employee).
+* Allow admins to assign and track tasks for specific employees.
+* Include notifications for employees when new tasks are assigned.
+* Add support for setting deadlines for tasks.
+* Implement automated reminders for upcoming or overdue tasks.
+
 # App Preview
 
 ### Interactive App Preview
